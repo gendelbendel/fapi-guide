@@ -15,5 +15,5 @@ export default defineConfig({
   ],
   site: `https://fapi-guide.vercel.app/`,
   output: "static",
-  adapters: vercel({ analytics: true }),
+  adapter: vercel({ analytics: true }),
 });
