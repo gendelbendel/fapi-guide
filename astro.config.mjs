@@ -1,14 +1,19 @@
-import { defineConfig } from 'astro/config';
-import preact from '@astrojs/preact';
-import react from '@astrojs/react';
+import { defineConfig } from "astro/config";
+import preact from "@astrojs/preact";
+import react from "@astrojs/react";
+import vercel from "@astrojs/vercel/static";
+import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
-	integrations: [
-		// Enable Preact to support Preact JSX components.
-		preact(),
-		// Enable React for the Algolia search component.
-		react(),
-	],
-	site: `https://astro.build`,
+  integrations: [
+    mdx({}),
+    // Enable Preact to support Preact JSX components.
+    preact(),
+    // Enable React for the Algolia search component.
+    react(),
+  ],
+  site: `https://fapi-guide.vercel.app/`,
+  output: "static",
+  adapters: vercel({ analytics: true }),
 });

@@ -1,0 +1,11 @@
+---
+import Link from "./Link.astro";
+
+const components = {
+  a: Link,
+};
+
+const { Content } = Astro.props;
+---
+
+<Content components={components} />
