@@ -1,6 +1,7 @@
 export const SITE = {
-  title: "FAPI-Guide",
-  description: "Your website description.",
+  title: "FAPI Guide",
+  description:
+    "A website dedicated to being a guide for the game Farmer Against Potatoes Idle.",
   defaultLanguage: "en-us",
 } as const;
 
@@ -36,13 +37,23 @@ export type Sidebar = Record<
 >;
 export const SIDEBAR: Sidebar = {
   en: {
-    "Section Header": [
+    Welcome: [
       { text: "Introduction", link: "en/introduction" },
-      { text: "Page 2", link: "en/page-2" },
-      { text: "Page 3", link: "en/page-3" },
+      { text: "Glossary", link: "en/glossary" },
     ],
-    "Another Section": [{ text: "Page 4", link: "en/page-4" }],
-    Ascension: [{ text: "Before Ascending", link: "en/before-ascending" }],
-    Tools: [{ text: "Spreadsheets", link: "https://google.com" }],
+    Guides: [
+      { text: "Ascension Priorities", link: "en/guides/ascension-priorities" },
+    ],
+    Checklists: [
+      {
+        text: "Before Reincarnating",
+        link: "en/checklists/before-reincarnating",
+      },
+      { text: "Before Ascending", link: "en/checklists/before-ascending" },
+    ],
+    Resources: [
+      { text: "Spreadsheets", link: "en/resources/spreadsheets" },
+      { text: "Tools", link: "en/resources/tools" },
+    ],
   },
 };
